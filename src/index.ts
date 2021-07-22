@@ -1,2 +1,1 @@
-console.log("Ola")
-console.log('Hello');
+console.log('Hello Word')

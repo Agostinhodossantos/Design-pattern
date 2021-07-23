@@ -1,10 +1,17 @@
-import { Beans, Meat, Rice } from "./classes/meals";
-import { MealBox } from "./classes/meal-box";
+import { MainDishBuilder } from "./classes/main-dish-builder";
+import { VeganDishBuilder } from "./classes/vegan-dish-builder";
 
-const rice = new Rice("arroz", 5);
-const beans = new Beans("Feijao", 10);
-const meat = new Meat("Carne", 20);
-const mealBox = new MealBox();
-mealBox.add(rice, beans, meat);
-console.log(mealBox);
-console.log(mealBox.getPrice());
+const mainDishBuilder = new MainDishBuilder();
+mainDishBuilder.makeMeal();
+
+console.log(mainDishBuilder.getMeal());
+console.log(mainDishBuilder.getPrice());
+
+mainDishBuilder.reset();
+const meal2 = mainDishBuilder.makeBeverage().makeMeal();
+console.log(meal2);
+
+const veganDishBuilder = new VeganDishBuilder();
+const veganMeal = veganDishBuilder.makeMeal();
+console.log(veganMeal);
+console.log(veganMeal.getPrice());

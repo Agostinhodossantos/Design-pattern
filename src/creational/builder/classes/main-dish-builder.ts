@@ -31,4 +31,8 @@ export class MainDishBuilder implements MealBuilderProtocol {
   getMeal(): MealBox {
     return this._meal;
   }
+
+  getPrice(): number {
+    return this._meal.getPrice();
+  }
 }

@@ -1,5 +1,5 @@
 import { Beans, Meat, Rice } from "./classes/meals";
-import { MealBox } from "./classes/meal";
+import { MealBox } from "./classes/meal-box";
 
 const rice = new Rice("arroz", 5);
 const beans = new Beans("Feijao", 10);

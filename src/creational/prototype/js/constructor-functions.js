@@ -7,7 +7,3 @@ const personPrototype = {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-
-const anotherPerson = Object.create(personPrototype);
-
-console.log(anotherPerson.fullName());
